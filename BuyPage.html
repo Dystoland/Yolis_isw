@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta charset = "UTF-8">
+        <link href="css/bootstrap.css" rel="stylesheet"/>
+        <link href="css/foundation.min.css" rel="stylesheet"/>
+        <link href="css/estiloCSS.css" rel="stylesheet"/>
+        <script src = "js/jquery-3.1.1.min.js"></script>
+        <script src ="js/jquery.easing.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <title>BuyGames</title>
+	    <style>
+            #body{
+                margin: 0px;
+            }
+            #PageBar{
+                height: 69px;
+                background-color: rgba(75, 75, 75, 0.05);
+                overflow: hidden;
+                max-width: 900rem;
+                margin: auto;
+            }
+            #ImgMini{
+                background-image: url(Catalog/Images/MiniBanner.png);
+                height: 75px;
+                width: 283px;
+                align-items: center;
+                margin-left: 530px;
+                position: absolute;
+            }
+            #Rest{
+                background-color: rgba(75, 75, 75, 0.05);
+                padding-top: 83px;
+                overflow: hidden;
+                max-width: 900rem;
+                margin: auto;
+                max-height: 1200rem;
+               
+            }
+            #Marco{
+                height: 540px;
+                max-width: 900rem;
+                margin-left: 50px;
+                margin-top: -40px;
+                overflow: hidden;
+            }
+            #TopMargin{
+                height: 128px;
+                width: 128px;
+                background-image: url(Catalog/Images/Marco.png);
+                margin-left: 300px;
+            }
+            #Bliblioteca{
+                width: 900rem;
+                padding-top: 28px;
+                padding-left: 150px;
+                font-size: 74px;
+                margin-top: 0px;
+                font-family: fantasy;
+            }
+            #luis1{
+                margin-bottom: 0px;
+            }
+            .informacion1{
+                width: 125px;
+                text-align: center;
+                font-size: 10px;
+                margin-top: 15px;
+            }
+            .informacion{
+                width: 125px;
+                text-align: center;
+                font-size: 10px;
+                margin: 0px;
+            }
+            .Genero{
+                text-align: center;
+                font-size: 10px;
+                margin: 0px;
+            }        
+            .Plataforma{
+                width: 125px;
+                height: 60px;
+                text-align: center;
+                font-size: 10px;
+                margin: 0px;
+            }
+            #lista{
+                font-family: fantasy;
+                text-align: center;
+                color: #000098;
+                background-color: rgba(255, 255, 255, 0.2);
+                font-size: 16px;
+                margin-top: 0px;
+            }
+            #Game{
+                width: 123px;
+                height: 265px;
+                position: relative;
+                display: inline-block;
+                margin-left: 65px
+            }
+            #GameNN{
+                width: 123px;
+                height: 200px;
+                position: relative;
+                display: inline-block;
+                margin-left: 65px
+            }
+            .FF{
+                background: url(Catalog/Images/Catalog/278882_123x159.jpg);
+                display: inline-block;
+                cursor: pointer;
+            }
+            .BF{
+                background: url(Catalog/Images/Catalog/430499_123x155.jpg);
+                display: inline-block;
+                cursor: pointer;
+            }
+            .WOW{
+                background: url(Catalog/Images/Catalog/279293_123x157.jpg);
+                display: inline-block;
+                cursor: pointer;
+            }
+            .TF{
+                background: url(Catalog/Images/Catalog/424173_123x157.jpg);
+                display: inline-block;
+                cursor: pointer;
+            }
+            .DB{
+                background: url(Catalog/Images/Catalog/433827_123x153.jpg);
+                display: inline-block;
+                cursor: pointer;
+            }
+            .RE{
+                background: url(Catalog/Images/Catalog/440055_123x156.jpg);
+                display: inline-block;
+                cursor: pointer;
+            }
+            .CV{
+                background: url(Catalog/Images/Catalog/437247_123x175.jpg);
+                display: inline-block;
+                cursor: pointer;
+            }
+            .DR{
+                background: url(Catalog/Images/Catalog/440914_123x155.jpg);
+                display: inline-block;
+                cursor: pointer;
+            }
+            .XC{
+                background: url(Catalog/Images/Catalog/442833_123x153.jpg);
+                display: inline-block;
+                cursor: pointer;
+            }
+            .LG{
+                background: url(Catalog/Images/Catalog/44980_123x159.jpg);
+                display: inline-block;
+                cursor: pointer;
+            }
+            .PKM{
+                background: url(Catalog/Images/Catalog/435737_123x111.jpg);
+                display: inline-block;
+                cursor: pointer;
+            }
+            .PKS{
+                background: url(Catalog/Images/Catalog/435738_123x109.jpg);
+                display: inline-block;
+                cursor: pointer;
+            }
+            #Game1{
+                width: 123px;
+                height: 159px;
+            }
+            #Game2{
+                width: 123px;
+                height: 111px;
+            }
+            
+        </style>
+        <body id="body">
+<header>
+         <div class="full-width">
+            <nav class="navbar navbar-default" id="luis1">
+                <div class="container">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                            </button>
+                              <a class="navbar-brand" href="inicio.html">INICIO</a>
+                        </div>
+
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    <li class="active"><a href="#">Noticias <span class="sr-only">(current)</span></a></li>
+                                    <li><a href="#">Foro</a></li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Compras <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Cat&aacute;logo</a></li>
+                                            <li><a href="#">Ofertas</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#"><i class="glyphicon glyphicon-shopping-cart"></i> Carrito</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="#">Iniciar Sesi&oacute;n</a></li>
+                                    <li class="dropdown">
+                                        <a href="registrarUsuarios.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuario <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Ajsutes</a></li>
+                                            <li><a href="#">Perfil</a></li>
+                                            <li><a href="#">Historial</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">Cerrar Sesi&oacute;n</a></li>
+                                        </ul>
+                                    </li>
+                                    <form class="navbar-form navbar-left">
+                                        <div class="form-group">
+                                            <input class="form-control" placeholder="Buscar en LocusRoom">
+                                        </div>
+                                        <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+                                    </form>
+                                </ul> 
+                            </div><!-- /.navbar-collapse -->
+                        </div><!-- /.container-fluid -->
+                    </div>
+                </nav>
+            </div>
+</header>            
+            <section id="PageBar">
+                <section id="ImgMini"> </section>
+            </section>
+            <section id="TopMargin">
+                 <h1 id="Bliblioteca">Biblioteca de Juegos</h1>
+            </section>
+            <section id="Rest">                
+                <section id="Marco">
+                    <ul id="ul">
+                        <li id="Game">
+                            <div class="FF" id="Game1"></div>
+                            <h2 id="lista">Final Fantasy XV</h2>
+                            <p class="informacion">Desarrollador: Square Enix</p>
+                            <p class="Genero">Genero: RPG</p>
+                            <p class="Plataforma">Plataforma: PlayStation 4 y Xbox One</p>
+                        </li>
+                        <li id="Game">
+                            <div class="BF" id="Game1"></div>
+                            <h2 id="lista">BattleField 1</h2>
+                            <p class="informacion">Desarrollador: DICE</p>
+                            <p class="Genero">Genero: Shooter</p>
+                            <p class="Plataforma">Plataforma: PlayStation 4, Xbox One y PC</p>
+                        </li>
+                        <li id="Game">
+                            <div class="WOW" id="Game1"></div>
+                            <h2 id="lista">Gears of War 4</h2>
+                            <p class="informacion">Desarrollador: Epic Games</p>
+                            <p class="Genero">Genero: Shooter</p>
+                            <p class="Plataforma">Plataforma: Xbox One y PC</p>
+                        </li>
+                        <li id="Game">
+                            <div class="TF" id="Game1"></div>
+                            <h2 id="lista">Titan Fall 2</h2>
+                            <p class="informacion">Desarrollador: EA</p>
+                            <p class="Genero">Genero: Shooter</p>
+                            <p class="Plataforma">Plataforma: Xbox One y PC</p>
+                        </li>
+                        <li id="Game">
+                            <div class="DB" id="Game1"></div>
+                            <h2 id="lista">DB: Xenoverse 2</h2>
+                            <p class="informacion">Desarrollador: Dimps</p>
+                            <p class="Genero">Genero: Figthing</p>
+                            <p class="Plataforma">Plataforma: PlayStation 4, Xbox One y PC</p>
+                        </li>
+                        <li id="Game">
+                            <div class="RE" id="Game1"></div>
+                            <h2 id="lista">RE: Biohazard</h2>
+                            <p class="informacion">Desarrollador: Capcom</p>
+                            <p class="Genero">Genero: Survival horror</p>
+                            <p class="Plataforma">Plataforma: PlayStation 4, Xbox One y PC</p>
+                        </li>
+                       
+                    </ul>
+                    <ul id="ul1">
+                     <li id="Game">
+                            <div class="CV" id="Game1"></div>
+                            <h2 id="lista">Civilization VI</h2>
+                            <p class="informacion">Desarrollador: Firaxis Games</p>
+                            <p class="Genero">Genero: Strategy</p>
+                            <p class="Plataforma">Plataforma: PC</p>
+                        </li>
+                        <li id="GameNN">
+                            <div class="PKM" id="Game2"></div>
+                            <h2 id="lista">Pokémon Soon</h2>
+                            <p class="informacion1">Desarrollador: Game Freak</p>
+                            <p class="Genero">Genero: Role</p>
+                            <p class="Plataforma">Plataforma: Nintendo 3DS</p>
+                        </li>
+                        <li id="Game">
+                            <div class="DR" id="Game1"></div>
+                            <h2 id="lista">Dead Rising 4</h2>
+                            <p class="informacion">Desarrollador: Capcom</p>
+                            <p class="Genero">Genero: Survival Horror</p>
+                            <p class="Plataforma">Plataforma: PC y Xbox One</p>
+                        </li>
+                        <li id="Game">
+                            <div class="XC" id="Game1"></div>
+                            <h2 id="lista">XCom 2</h2>
+                            <p class="informacion">Desarrollador: 2K Games</p>
+                            <p class="Genero">Genero: Shooter</p>
+                            <p class="Plataforma">Plataforma: PlayStation 4, PC y Xbox One</p>
+                        </li>
+                        <li id="Game">
+                            <div class="LG" id="Game1"></div>
+                            <h2 id="lista">The Last Guardian</h2>
+                            <p class="informacion">Desarrollador: Sony Interactive</p>
+                            <p class="Genero">Genero: Adventure</p>
+                            <p class="Plataforma">Plataforma: PlayStation 4</p>
+                        </li>
+                        <li id="GameNN">
+                            <div class="PKM" id="Game2"></div>
+                            <h2 id="lista">Pokémon Moon</h2>
+                            <p class="informacion1">Desarrollador: Game Freak</p>
+                            <p class="Genero">Genero: Role</p>
+                            <p class="Plataforma">Plataforma: Nintendo 3DS</p>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </body>
+    </head>
+</html>
