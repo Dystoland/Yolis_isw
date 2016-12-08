@@ -1,0 +1,181 @@
+
+<html>
+    <meta charset="utf-8">
+    <title>Registrate</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src = "js/jquery-3.1.1.min.js"></script>
+    <script src ="js/jquery.easing.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <head>
+    <style>
+        .container1{
+            margin-top: 10px;
+            margin-left: 30px;
+            margin-right: 50px;
+            float: right;
+            
+        }
+        .registro{
+            position: absolute;
+            width: 600px;
+            margin-left: 30px;
+            margin-top: 90px;
+        }
+        .formulario{
+            overflow: hidden;
+            max-width: 0rem;
+            margin: auto;
+        }
+        .form-group{
+            margin-right: 10px;
+        }
+        
+        </style>
+        <script type = "text/javascript">
+            window.onload = function () {
+                 document.formularioRegistro.user.focus();
+                 document.formularioRegistro.password.focus();
+                 document.formularioRegistro.addEventListener('submit', validarFormulario);
+                 document.formularioRegistro.addEventListener('submit', validarPass);
+             }
+             function validarFormulario(evObject) {
+                 evObject.preventDefault();
+                 var todoCorrecto = true;
+                 var formulario = document.formularioRegistro;
+                  var pass1=document.formularioRegistro.password;
+                var pass2=document.formularioRegistro.password2;
+                 for (var i=0; i<formulario.length; i++) {
+                     if(formulario[i].type =='text') {
+                         if (formulario[i].value == null || formulario[i].value.length == 0 || /^\s*$/.test(formulario[i].value)){
+                             alert ('[ERROR] el campo '+formulario[i].name+ ' no puede estar vacío o contener sólo espacios en blanco');
+                             todoCorrecto=false;
+                         }
+                     }
+                    
+                 }
+                   if(pass1.value.length > 20){
+                    alert('[ERROR] la contraseña debe ser menor a 20 caracteres');
+                    pass1.focus();
+                    todoCorrecto = false;
+                }
+                else if(pass1.value != pass2.value){
+                     alert('[ERROR] las contraseñas no coinciden');
+                     pass1.focus();
+                     pass2.focus();
+                     todoCorrecto = false;
+                 }
+                 
+                 if (todoCorrecto ==true ) {
+                     formulario.submit();}
+             }
+             
+            
+        </script>
+        
+    </head>
+    <body>
+        <header>
+            <div class="full-width">
+                <nav class="navbar navbar-default">
+                    <div class="container">
+                        <div class="container-fluid">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                  <span class="sr-only">Toggle navigation</span>
+                                  <span class="icon-bar"></span>
+                                  <span class="icon-bar"></span>
+                                  <span class="icon-bar"></span>
+                                </button>
+                              <a class="navbar-brand" href="inicio.html">INICIO</a>
+                            </div>
+
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                   <!-- <li class="active"><a href="#">Noticias <span class="sr-only">(current)</span></a></li>-->
+                                   <!-- <li><a href="registrarUsuarios.html">Foro</a></li>-->
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Juegos <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="BuyPage.html">Cat&aacute;logo</a></li>
+                                           <!-- <li><a href="#">Ofertas</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#"><i class="glyphicon glyphicon-shopping-cart"></i> Carrito</a></li>-->
+                                        </ul>
+                                    </li>
+                                </ul>
+                                
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="registrarUsuarios.html">Iniciar Sesi&oacute;n</a></li>
+                                    <li class="dropdown">
+                                       <!-- <a href="registrarUsuarios.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuario <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Ajustes</a></li>
+                                            <li><a href="#">Perfil</a></li>
+                                            <li><a href="#">Historial</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">Cerrar Sesi&oacute;n</a></li>
+                                        </ul>
+                                    </li> -->
+                                    <form class="navbar-form navbar-left">
+                                        <div class="form-group">
+                                            <input class="form-control" placeholder="Buscar en LocusRoom">
+                                        </div>
+                                        <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+                                    </form>
+                                </ul> 
+                            </div><!-- /.navbar-collapse -->
+                        </div><!-- /.container-fluid -->
+                    </div>
+                </nav>
+            </div>
+        </header> 
+        
+        <div class="container1">
+            <form class="form-inline" action="php/getUsuariosLogin.php" method="post" >
+                <div class="form-group">
+                    <label>¿Ya tienes cuenta?</label>
+                    <label>Ingresa </label>
+                    <label class="sr-only" for="InputEmail">User Name</label>
+                    <input type="text" class="form-control" id="InputUser" placeholder="User Name" name="user">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="exampleInputPassword3">Password</label>
+                    <input type="password" class="form-control" id="InputPassword1" placeholder="Password" name="password">
+                </div>
+                <button type="submit" class="btn btn-default">Sign in</button>
+                <!--<div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Remember me
+                    </label>
+                </div>-->
+            </form>
+        </div>
+        <div class="formulario" algin=center>
+        <form name="formularioRegistro" action="php/insertUsuarios.php" class="registro" method="POST">
+            <label>Registrate</label>
+            <hr>
+            <div class="form-group">
+                <label for="InputEmail1">Nombre</label>
+                <input type="text" name="user" class="form-control" id="InputUser" placeholder="User Name">
+            </div>
+            <div class="form-group">
+                <label for="InputEmail1">Email address</label>
+                <input type="email" name="email" class="form-control" id="InputEmail1" placeholder="ejemplo@email.com">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" name="password" class="form-control" id="InputPassword2" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword2">Confirm Password</label>
+                <input type="password" name="password2" class="form-control" id="InputPassword3" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-default" id="submitButton">Submit</button>
+        </form>
+            </div>
+    </body>
+    
+</html>
